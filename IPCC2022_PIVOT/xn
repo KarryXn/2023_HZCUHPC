@@ -145,9 +145,9 @@ int partition2(double arr[], int pivots[], int low, int high, int k) {
         	
 		}
     }
-    swap1(&arr[i +1], &arr[high]);
+    swap1(&arr[i +1], &arr[high-1]);
     for (int kj = 0; kj < k; kj++) {
-        swap3(&pivots[(i + 1) * k + kj], &pivots[high * k + kj]);
+        swap3(&pivots[(i + 1) * k + kj], &pivots[(high-1) * k + kj]);
     }
 
     return (i+1 );
